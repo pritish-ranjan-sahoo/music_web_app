@@ -18,8 +18,8 @@ A frontend music web application that allows users to explore and play their fav
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/CharlieCoder404/music_web_app.git
-   cd music_web_app
+   git clone https://github.com/pritish-ranjan-sahoo/music_web_app.git
+   navigate music_web_app > spotify > index.html
    ```
 
 2. **Open the Application**:
@@ -45,4 +45,4 @@ A frontend music web application that allows users to explore and play their fav
 
 ## Acknowledgements
 
-- Inspired by various music streaming platforms.
+- Inspired by spotify music streaming platforms.
