@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - A web Music Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Left Box -->
+        <div class="leftBox">
+            <div class="logoSection">
+                <div class="brandLogo">
+                    <img class="invert" width="100px" src="img/logo.svg" alt="">
+                    <img src="img/close.svg" width="20px" class="invert closeButton" alt="">
+                </div>
+                <div class="homeIcon">
+                    <img class="invert" width="20px" src="img/home.svg" alt="">
+                    <p>Home</p>
+                </div>
+                <div class="searchIcon">
+                    <img class="invert" width="20px" src="img/search.svg" alt="">
+                    <p>Search</p>
+                </div>
+            </div>
+            <div class="librarySection">
+                <div class="libraryHeading">
+                    <img class="invert" width="23px" src="img/playlist.svg" alt="">
+                    <p>Your Library</p>
+                </div>
+                <div class="libraryList">
+
+                    <!-- Library Card Template -->
+                    <!-- <div class="libraryCard">
+                        <div class="musicLogoLibraryCard">
+                            <img src="img/music.svg" class="invert" width="25px" alt="">
+                        </div>
+                        <div class="songInfoLibraryCard">
+                            <p class="songNameLibraryCard">hello there I love you and I miss you.mp3</p>
+                            <p class="artistNameLibraryCard">By Weekend</p>
+                        </div>
+                        <div class="playNowLibraryCard">
+                            <p>Play Now</p>
+                        </div>
+                        <div class="playLogoLibraryCard">
+                            <img src="img/play.svg" width="25px" class="invert" alt="">
+                        </div>
+                    </div> -->
+
+
+
+                </div>
+            </div>
+            <div class="footerSection">
+                <ul>
+                    <li class="leftFooterOptions"><a href="#"><span>Privacy Policy</span></a></li>
+                    <li class="leftFooterOptions"><a href="#"><span>About Ads</span></a></li>
+                    <li class="leftFooterOptions"><a href="#"><span>Accessibility</span></a></li>
+                    <li class="leftFooterOptions"><a href="#"><span>Privacy Center</span></a></li>
+                    <li class="leftFooterOptions"><a href="#"><span>Cookies</span></a></li>
+                    <li class="leftFooterOptions"><a href="#"><span>Legal</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Right Box -->
+        <div class="rightBox">
+            <div class="nav">
+
+                <!-- Nav Bar -->
+                <div class="navLogos">
+                    <img src="img/hamburger.svg" width="25px" class="hamburgerLogo invert" alt="">
+                    <img src="img/left.svg" width="25px" class="invert" alt="">
+                    <img src="img/right.svg" width="25px" class="invert" alt="">
+                </div>
+                <div class="navButtons">
+                    <button class="signUpButtonNav">Sign Up</button>
+                    <button class="logInButtonNav">Log in</button> 
+                </div>
+            </div>
+
+            <!-- Main Content -->
+             <div class="main">
+
+                <!-- Hero Section -->
+                 <h2>Spotify Playlists</h2>
+                 <div class="albums">
+                    
+                    <!-- Album card template -->
+                    <!-- <div class="albumCard" data-folder="folder_name">
+                        <img src="img/cover.jpg" alt="">
+                        <p class="playlistName">Playlist Name</p>
+                        <p class="playlistInfo">Platlist Info</p>
+                        <img src="img/greenPlay.svg" class="greenPlayIcon" height="50px" alt="">
+                    </div> -->
+
+                 </div>
+
+                 <!-- Playbar -->
+                 <div class="playBar">
+                    <div class="playBarOptions">
+                        <div class="playBarSongDetails">                        </div>
+                        <div class="playBarIconSpace">
+                            <img src="img/prevsong.svg" alt="" class="playBarIcons invert" id="previous" width="25px">
+                            <img src="img/play.svg" alt="" class="playBarIcons invert" id="playBtn" width="25px">
+                            <img src="img/nextsong.svg" alt="" id="next" class="playBarIcons invert" width="25px">
+                        </div>
+                        <div class="duration">
+                            00:00 / 00:00
+                        </div>
+                        <div class="volumeSpace">
+                            <img src="img/volume.svg" alt="" width="20px" class="invert muteUnmuteBtn" >
+                            <input type="range" name="volumeBar" id="volumeBar">
+                        </div>
+                    </div>
+                    <div class="seekBarLine">
+                        <input type="range" name="seekBar" id="seekBar">
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

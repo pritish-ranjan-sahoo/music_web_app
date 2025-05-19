@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", serif;
+  font-weight: 600;
+}
+.invert {
+  filter: invert(1);
+}
+:root {
+  --pad: 10px;
+  --mar: 10px;
+  --smallPad: 5px;
+  --smallMar: 5px;
+  --fontSizeLargeScreen: 48px;
+  --fontSizeSmallElements: 12px;
+  --fontSizeSmallElementsSmallScreen: 10px;
+  --fontSizeSmallScreen: 32px;
+  --primeColor: black;
+  --secColor: rgb(42, 42, 42);
+  --hovColor: rgb(59, 59, 59);
+  --primeTextColor: white;
+  --secTextColor: rgb(170, 170, 170);
+  --defaultRadius: 10px;
+  --defaultGap: 10px;
+  --smallGap: 5px;
+  --cardColor:rgb(73, 73, 73);
+  --opacityVal:0;
+}
+input[type="range"] {
+    -webkit-appearance : none;
+    width: 100%;
+    height: 8px;
+    margin: 10px 0;
+    background: transparent; 
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 1px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+
+body {
+  background-color: var(--primeColor);
+  color: var(--primeTextColor);
+  position: relative;
+}
+.container {
+  display: flex;
+}
+
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--smallGap);
+  margin: var(--smallMar) var(--mar);
+  width: 400px;
+  height: 760px;
+  background-color: var(--hoverColor);
+  border-radius: var(--defaultRadius);
+  z-index: 1;
+  transition: all 0.1s ease-out;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20%;
+  background-color: var(--secColor);
+  border-radius: var(--defaultRadius);
+}
+.brandLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brandLogo img {
+  padding: var(--pad);
+}
+.closeButton {
+  display: none;
+}
+
+.homeIcon {
+  display: flex;
+  align-items: center;
+  gap: var(--defaultGap);
+  padding: var(--pad);
+}
+.homeIcon:hover {
+  cursor: pointer;
+  color: var(--secTextColor);
+  text-decoration: underline;
+}
+.searchIcon {
+  display: flex;
+  align-items: center;
+  gap: var(--defaultGap);
+  padding: var(--pad);
+}
+.searchIcon:hover {
+  cursor: pointer;
+  color: var(--secTextColor);
+  text-decoration: underline;
+}
+
+.librarySection {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  background-color: var(--secColor);
+  border-radius: var(--defaultRadius);
+}
+.libraryList {
+  display: flex;
+  padding-bottom: var(--pad);
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+}
+.libraryList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.libraryList::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: var(--defaultRadius);
+}
+
+.libraryList::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.libraryList::-webkit-scrollbar-track {
+  background-color: var(--secColor);
+  border-radius: var(--defaultRadius);
+  margin: var(--mar);
+}
+.libraryHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--defaultGap);
+  padding: var(--pad);
+}
+
+.libraryCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--defaultGap);
+  margin-top: var(--mar);
+  padding: var(--smallPad);
+  width: 90%;
+  cursor: pointer;
+  border-radius: var(--defaultRadius);
+  overflow: visible;
+  transition: all 1s ease;
+}
+.libraryCard * {
+  font-size: var(--fontSizeSmallElements);
+  font-weight: 100;
+}
+.musicLogoLibraryCard {
+  background-color: var(--hovColor);
+  border-radius: var(--defaultRadius);
+  padding: var(--pad);
+}
+.libraryCard .songNameLibraryCard {
+  font-size: 14px;
+  font-weight: 400;
+  word-break: break-all;
+}
+.libraryCard .artistNameLibraryCard {
+  font-size: 14px;
+  font-weight: 400;
+  word-break: break-all;
+  font-style: italic;
+  color: var(--secTextColor);
+}
+.songInfoLibraryCard {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 2px;
+}
+.playNowLibraryCard p {
+  font-size: 14px;
+  text-align: center;
+}
+.playLogoLibraryCard {
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5%;
+  background-color: var(--secColor);
+  border-radius: var(--defaultRadius);
+}
+.footerSection ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.leftFooterOptions a {
+  color: var(--secTextColor);
+  padding:0 2px;
+  font-size: 8px;
+}
+.leftFooterOptions a:hover {
+  color: rgb(206, 206, 206);
+}
+
+.rightBox {
+  margin: var(--smallMar) var(--mar);
+  margin-left: 0;
+  width: 75vw;
+  height: 760px;
+  background-color: var(--secColor);
+  border-radius: var(--defaultRadius);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 6%;
+  background-color: var(--hovColor);
+  padding: var(--pad);
+  border-radius: var(--defaultRadius);
+}
+.navLogos{
+    display: flex;
+    gap:var(--defaultGap) ;
+}
+.hamburgerLogo{
+    display: none;
+}
+.navButtons{
+    margin: var(--mar);
+}
+.signUpButtonNav{
+    padding: var(--pad);
+    width: 80px;
+    border-radius: 20px;
+    color: var(--secTextColor);
+    background-color:rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+.signUpButtonNav:hover{
+    color:var(--hoverColor);
+    font-weight:800 ;
+}
+.logInButtonNav{
+    padding: var(--pad);
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.logInButtonNav:hover{
+    background-color: rgba(255, 255, 255, 0.825);
+}
+.main{
+    padding: var(--pad);
+}
+.main h2{
+    padding: var(--pad);
+    margin: var(--mar);
+}
+.albums{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    width: 100%;
+    height: 510px;
+}
+.albums::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .albums::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: var(--defaultRadius);
+  }
+  
+  .albums::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .albums::-webkit-scrollbar-track {
+    background-color: var(--secColor);
+    border-radius: var(--defaultRadius);
+    margin: 50px;
+  }
+.albumCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--defaultGap);
+    width:180px;
+    height:230px;
+    margin: var(--mar);
+    padding: var(--pad);
+    border-radius: var(--defaultRadius);
+    background-color: var(--cardColor);
+    position: relative;
+}
+.albumCard:hover{
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    --opacityVal: 1;
+}
+.albumCard img{
+    width: 96%;
+    border-radius: var(--defaultRadius);
+}
+.playlistName{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    height: 35px;
+}
+.playlistInfo{
+    display: flex;
+    width: 100%;
+    font-weight: 200;
+    font-size: var(--fontSizeSmallElements);
+    word-break: break-all;
+    overflow: hidden;
+    height: 30px;
+}
+.greenPlayIcon{
+    position: absolute;
+    bottom:70px;
+    right: -60px;
+    opacity: var(--opacityVal);
+    transition: all 250ms ease-in;
+}
+.playBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 70vw;
+    height: 80px;
+    bottom: 20px;
+    right: 38px;
+    gap: var(--smallGap);
+    background-color: rgb(62, 62, 62); 
+    border-radius: var(--defaultRadius);
+}
+.playBarOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--defaultGap);
+}
+.playBarSongDetails{
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    padding: var(--pad);
+    width: 40%;
+    height: 8px;
+    overflow: hidden;
+    word-break:break-all ;
+    font-size: 14px;
+    font-weight: 500;
+}
+.playBarIconSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--defaultGap);
+    width: 20%;
+    padding: var(--pad);
+}
+#playBtn , #previous , #next{
+  cursor: pointer;
+}
+
+.duration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    gap: var(--defaultGap);
+    padding: var(--pad);
+    width: 25%;
+}
+.volumeSpace{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: var(--defaultGap);
+    padding: var(--pad);
+    width: 15%;
+    cursor: pointer;
+}
+.seekBarLine{
+    width: 90%;
+}
+#volumeBar{
+    width: 50%;
+}
+@media screen and (max-width: 1400px) {
+    .albums{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }   
+    .playBar{
+      width: 65vw;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .leftBox{
+        position: absolute;
+        left: -130%;
+    }  
+    .rightBox{
+        width: 99vw;
+        position: relative;
+        left: 5px;
+    }
+    .hamburgerLogo{
+        display: block;
+    }
+    .closeButton{
+        display: block;
+    }
+    .playBar{
+        right: 130px;
+    }
+    .playBarSongDetails{
+        width: 100%;
+        justify-content: center;
+    }
+    .duration{
+        width: 100%;
+    }
+    .volumeSpace{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 850px) {
+  .nav{
+    width: 97%;
+  }
+  .rightBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+    .hamburgerLogo{
+        display: block;
+    }
+    .playBar{
+        width: 80vw;
+        right: 45px;
+        bottom: 10px;
+        height: 150px;
+        gap: 0;
+    }
+    .playBarOptions{
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: var(--smallMar);
+    }
+    .playBarSongDetails{
+      width: 90%;
+      align-items: start;
+  }
+    .playBarIconSpace , .volumeSpace , .duration{
+      padding: 0px;
+      padding-top: 10px;
+    }
+    .playBarIconSpace img{
+      width: 15px;
+    }
+    .volumeSpace img{
+      width: 15px;
+    }
+    .duration{
+      font-size: var(--fontSizeSmallElementsSmallScreen);
+    }
+    .albums{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media screen and (max-width: 662px) { 
+  .rightBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    .albums{
+        grid-template-columns: 1fr 1fr;
+    }
+    .playBar{
+      right: 45px;
+  }
+}
+@media screen and (max-width:460px) {
+  .nav{
+    width: 94%;
+  }
+  .rightBox{
+    display: flex;
+    flex-direction: column;
+  }
+    .albums{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .playBar{
+      right: 40px;
+  }
+}
+@media screen and (max-width:410px) {
+  .leftBox{
+    width: 96vw;
+  }  
+}
+
+@media screen and (min-height:780px) {
+  .leftBox , .rightBox{
+    height: 99vh;
+  }
+  .albums{
+    height:65vh ;
+  }
+}
+@media screen and (min-width:1700px){
+  .nav{
+    width: 99%;
+  }
+  .leftBox{
+    
+    width: 25vw;
+  }
+  .albums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
