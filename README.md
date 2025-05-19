@@ -19,7 +19,7 @@ A frontend music web application that allows users to explore and play their fav
 
    ```bash
    git clone https://github.com/pritish-ranjan-sahoo/music_web_app.git
-   navigate music_web_app > spotify > index.html
+   navigate index.html
    ```
 
 2. **Open the Application**:
